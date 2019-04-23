@@ -21,7 +21,7 @@ function createTestBot (opts) {
   plugins.forEach(plugin => createSbot.use(plugin))
   plugins = []
 
-  return createSbot(Object.assign({}, opts, {temp: opts.name}))
+  return createSbot(Object.assign({}, opts, {temp: opts.name, startUnclean: opts.startUnclean}))
 }
 
 createTestBot.use = function (plugin) {
