@@ -7,7 +7,7 @@ var plugins = []
 function createTestBot (opts) {
   opts = opts || {}
 
-  var createSbot = require('scuttlebot')
+  var createSbot = require('ssb-server')
   if (createSbot.createSbot) { createSbot = createSbot.createSbot() }
 
   if (!opts.name) { opts.name = 'ssb-test-' + Number(new Date()) }
